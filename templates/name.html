@@ -1,11 +1,7 @@
-
-<hmtl>
-    <head>
-        <h1><center>IS YOUR NAME {{context}}??</center></h1>
-    </head>
+{% extends "base.html" %}
+{% block heading %}<center>IS YOUR NAME {{name}}??</center>{% endblock %}
 
 
-    <body>
-        <p>welcome back: {{context}}</p>
-    </body>
-</hmtl>
+{% block content %}
+    welcome back: {{name}}
+{% endblock %}

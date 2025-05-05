@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block heading %}Home Page{% endblock %}
+
+{% block content %}
+    {% for x in range(0, 10) %}
+        <p>Counting : {{x}}</p>
+    {% endfor %}
+{% endblock %}
