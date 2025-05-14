@@ -3,5 +3,12 @@
 
 
 {% block content %}
-    welcome back: {{name}}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for m in messages %}
+            <h><center>{{m}}</center></h>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    Your name is: {{name}} and email is: {{email}}
 {% endblock %}

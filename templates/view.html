@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block heading %}DATABASE{% endblock %}
+
+
+{% block content %}
+
+{% for item in values %}
+    <h><center>Name: {{item.name}}, Email: {{item.email}}</center></h>
+{% endfor %}
+
+
+
+{% endblock %}

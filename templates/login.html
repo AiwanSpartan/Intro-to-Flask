@@ -2,10 +2,20 @@
 {% block heading %}Login Page{% endblock %}
 
 
-{%block content %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for m in messages %}
+        <h><center>{{m}}</center></h>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
 <form action="#" method="post">
-    <p><center>Name: </center> </p>
-    <p><center><input type = "text" name = "nm"></center></p>
-    <p><center><input type = "submit" value = "click when done"></center></p>
+    
+   <p><center>Name: <input type = "text" name = "nm"></center></p>
+
+    <p><center>Enter email: <input type="email" name="em" placeholder="Enter email" value="{{email if email else ''}}"/></center>
+    <center><input type="submit" value="Complete Login"/></center>
 </form>
 {% endblock %}
